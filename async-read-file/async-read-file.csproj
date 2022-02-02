@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>async_read_file</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="tb.pdf" />
+    <None Remove="test.har" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="test.har">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tb.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
